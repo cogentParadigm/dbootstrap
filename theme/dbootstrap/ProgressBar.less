@@ -1,0 +1,68 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dijitProgressBar {
+	&:extend(.progress);
+}
+
+.dbootstrap .dijitProgressBarEmpty {
+	border:none;
+}
+
+.dbootstrap .dijitProgressBarFull {
+	&:extend(.progress-bar all);
+}
+
+.dbootstrap .dijitProgressBarTile {
+    display: none;
+}
+
+.dbootstrap .dijitProgressBarLabel {
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.5);
+}
+
+// Colours
+// -------------------
+
+// Danger (red)
+.dbootstrap .dijitProgressBar.danger .dijitProgressBarFull {
+	&:extend(.progress-bar-danger);
+}
+
+// Success (green)
+.dbootstrap .dijitProgressBar.success .dijitProgressBarFull {
+	&:extend(.progress-bar-success);
+}
+
+// Info (teal)
+.dbootstrap .dijitProgressBar.info .dijitProgressBarFull {
+	&:extend(.progress-bar-info);
+}
+
+// Warning (orange)
+.dbootstrap .dijitProgressBar.warning .dijitProgressBarFull {
+	&:extend(.progress-bar-warning);
+}
+
+// Striped
+.dbootstrap .dijitProgressBar.striped .dijitProgressBarFull {
+	&:extend(.progress-striped .progress-bar);
+}
+
+// Animated (stripes)
+// -------------------
+
+.dbootstrap .dijitProgressBar.animated .dijitProgressBarFull {
+	.animation(progress-bar-stripes 2s linear infinite);
+}
+
+// Indeterminate
+// -------------------
+
+.dbootstrap .dijitProgressBarIndeterminate .dijitProgressBarFull {
+    &:extend(.dbootstrap .dijitProgressBar.striped .dijitProgressBarFull);
+	.animation(progress-bar-stripes 2s linear infinite);
+}
+
+

@@ -1,0 +1,103 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap fieldset {
+    &:extend(.well all);
+}
+
+.dbootstrap label {
+    vertical-align: middle;
+}
+
+// TextBox
+.dbootstrap .dijitTextBox {
+	&:extend(.form-control);
+	padding:0;
+}
+
+.dbootstrap .dijitTextBoxFocused {
+	&:extend(.form-control:focus);
+}
+
+.dbootstrap .dijitInputContainer {
+  padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+.dbootstrap .dijitInputField .dijitInputInner {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+}
+
+.dbootstrap .dijitPlaceHolder {
+	font-style:normal;
+	font-size: @font-size-base;
+	line-height: @line-height-base;
+  	padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+.dbootstrap .dijitTextBoxDisabled, .dbootstrap .dijitTextBoxReadOnly {
+	&:extend(.form-control[disabled]);
+}
+
+.dj_webkit .dbootstrap .dijitTextBoxDisabled input,
+.dj_webkit .dbootstrap textarea.dijitTextAreaDisabled,
+.dbootstrap .dijitTextBoxDisabled,
+.dbootstrap .dijitTextBoxReadOnly {
+    //color: $inputDisabledColor;
+}
+
+// TextArea
+.dbootstrap .dijitTextArea {
+	&:extend(.form-control);
+	&:extend(textarea.form-control);
+	padding:6px 12px;
+	line-height:1.5;
+}
+
+// ComboBox
+.dbootstrap .dijitComboBox .dijitButtonNode {
+	&:extend(.dbootstrap .dijitComboButton .dijitButtonNode);
+}
+
+.dbootstrap .dijitComboBox .dijitButtonNode.dijitArrowButton {
+    &:extend(.dbootstrap .dijitComboButton .dijitArrowButton);
+}
+
+.dbootstrap .dijitComboBox input.dijitArrowButtonInner {
+    display: none;
+}
+
+.dbootstrap .dijitComboBoxDisabled .dijitButtonNode {
+    &:extend(.dbootstrap .dijitComboButtonDisabled .dijitButtonNode);
+    //background-color: $inputDisabledBackground;
+}
+
+// Validation
+.dbootstrap .dijitTextBoxError {
+	&:extend(.alert);
+	&:extend(.alert-danger);
+}
+
+.dbootstrap .dijitTextBoxError.dijitTextBoxFocused {
+    //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten($errorText, 20%);
+}
+
+.dbootstrap .dijitValidationContainer {
+    display: none;
+}
+
+.dbootstrap .dijitUpArrowButton .dijitArrowButtonInner:before{content:@fa-var-caret-up}
+.dbootstrap .dijitDownArrowButton .dijitArrowButtonInner:before{content:@fa-var-caret-down}
+
+.dbootstrap .dijitSpinnerButtonContainer.dijitButtonNode {
+    &:extend(.dbootstrap .dijitComboBox .dijitButtonNode);
+    &:extend(.dbootstrap .dijitComboBox .dijitButtonNode.dijitArrowButton);
+}
+
+.dbootstrap .dijitSpinnerDisabled .dijitButtonNode {
+    &:extend(.dbootstrap .dijitComboBoxDisabled .dijitButtonNode);
+}
+
+.dj_webkit .dbootstrap .dijitSpinnerButtonContainer.dijitButtonNode {
+    padding: 4px 10px !important
+}

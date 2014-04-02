@@ -1,0 +1,29 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dijitAccordionContainer {
+	border:none;
+}
+
+.dbootstrap .dijitAccordionInnerContainer {
+	&:extend(.panel all,.panel-group .panel);
+	&:extend(.panel-default all);
+	margin-bottom:2px;
+}
+
+.dbootstrap .dijitAccordionTitle {
+	&:extend(.panel-default>.panel-heading,.panel-heading);
+}
+
+.dbootstrap .dijitAccordionChildWrapper {
+	&:extend(.panel-body all, .panel-group .panel-body);
+	padding:0;
+}
+
+.dbootstrap .dijitAccordionTitleHover {
+    color: @link-hover-color;
+}
+
+.dbootstrap .dijitAccordionContainer .dijitAccordionContainer-child{
+	padding:10px;
+}

@@ -1,0 +1,251 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+// Menu bar
+.dbootstrap .dijitMenuBar {
+    &:extend(.nav);
+}
+
+.dbootstrap .dijitMenu {
+	background:@dropdown-bg;
+	border:1px solid @dropdown-border;
+}
+
+.dbootstrap .dijitMenuItem {
+	color:@text-color;
+	padding: @nav-link-padding;
+}
+
+.dbootstrap .dijitMenuItemHover,
+.dbootstrap .dijitMenuItemSelected,
+.dbootstrap .dijitMenuItemActive {
+	background-color: @nav-link-hover-bg;
+}
+
+.dbootstrap .dijitMenuBar .dijitMenuItemDisabled {
+	color: @nav-disabled-link-color;
+}
+
+/* this prevents jiggling upon hover of a menu item */
+.dbootstrap .dijitMenuTable {
+	border-collapse:separate;
+	border-spacing:0 0;
+	padding:0;
+}
+
+.claro .dijitMenu .dijitMenuItemHover td,
+.claro .dijitMenu .dijitMenuItemSelected td,
+.claro .dijitMenuItemHover,
+.claro .dijitComboBoxMenu .dijitMenuItemHover,
+.claro .dijitMenuItemSelected {
+	background-color: @nav-link-hover-bg;
+}
+
+// Brand
+.dbootstrap .dijitMenuBar .brand {
+    font-weight: 200;
+    font-size: (@font-size-base * 1.5);
+    padding: 10px;
+    display: inline;
+    vertical-align: middle;
+}
+
+// Primary menu
+.dbootstrap .dijitMenuBar.primary {
+    border-radius: 0px;
+    margin-bottom: 5px;
+}
+
+// Menu
+.dbootstrap .dijitMenu {
+    z-index: @zindex-dropdown;
+    padding: 5px 0;
+    margin: 2px 0 0; // override default ul
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-border;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-collapse: separate;
+}
+
+.dbootstrap .dijitMenuItem {
+    font-weight: normal;
+    color: $dropdownLinkColor;
+    white-space: nowrap;
+    padding: 6px 20px;
+}
+
+.dbootstrap td.dijitMenuItemLabel {
+    padding: 6px 0.3em;
+}
+
+.dbootstrap tr.dijitMenuItem td:first-child {
+    padding-left: 20px;
+}
+
+.dbootstrap tr.dijitMenuItem td:last-child {
+    padding-right: 20px;
+}
+
+// Separator
+.dbootstrap .dijitMenuSeparator {
+    //margin: (($baseLineHeight / 2) - 1) 1px;
+}
+
+.dbootstrap .dijitMenuSeparatorTop {
+    //border-bottom: 1px solid $dropdownDividerTop;
+    height: auto;
+}
+
+.dbootstrap .dijitMenuSeparatorBottom {
+    height: auto;
+}
+
+// Icon
+.dbootstrap .dijitMenuItemIcon,
+.dbootstrap .dijitMenuExpand  {
+    // Keep in line with labels
+    //line-height: $baseLineHeight * 0.65;
+}
+
+.dbootstrap .dijitMenuArrowCell .dijitMenuExpand:before {
+    &:extend(.dijitIcon);
+    &:extend(.fa-caret-right:before);
+}
+
+
+// INVERSE
+
+// Inverse navbar
+
+.dbootstrap .dijitMenuBar.inverse {
+  background-color: @navbar-inverse-bg;
+  border-color: @navbar-inverse-border;
+
+  .brand {
+    color: @navbar-inverse-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-brand-hover-color;
+      background-color: @navbar-inverse-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-inverse-color;
+  }
+
+
+    .dijitMenuItem {
+      color: @navbar-inverse-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-hover-bg;
+      }
+    }
+    .dijitMenuItemSelected,.dijitMenuItemHover,.dijitMenuItemActive {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+    .dijitMenuItemDisabled {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+        background-color: @navbar-inverse-link-disabled-bg;
+      }
+    }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-inverse-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-inverse-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-inverse-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-inverse-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-inverse-link-active-bg;
+        color: @navbar-inverse-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-inverse-border;
+        }
+        .divider {
+          background-color: @navbar-inverse-border;
+        }
+        > li > a {
+          color: @navbar-inverse-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-hover-color;
+            background-color: @navbar-inverse-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-active-color;
+            background-color: @navbar-inverse-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-disabled-color;
+            background-color: @navbar-inverse-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-inverse-link-color;
+    &:hover {
+      color: @navbar-inverse-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: @navbar-inverse-link-color;
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+      }
+    }
+  }
+}

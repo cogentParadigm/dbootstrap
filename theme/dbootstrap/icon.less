@@ -1,0 +1,275 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+// General
+// -------------------
+
+.dijitIcon:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.dijitNoIcon {
+    display: none;
+}
+
+
+// Icons
+// Backwards compatibility for those not using the newer style icon classes.
+// For example: dijitIconCut instead of icon-cut
+// -------------------
+
+.dijitIconSave:before {
+	content:@fa-var-floppy-o;
+}
+.dijitIconPrint:before {
+    content:@fa-var-print;
+}
+.dijitIconCut:before {
+	content:@fa-var-scissors;
+}
+.dijitIconCopy:before {
+	content:@fa-var-files-o;
+}
+.dijitIconPaste:before {
+	content:@fa-var-clipboard;
+}
+.dijitIconClear:before {
+    // &:extend(.icon-);
+}
+.dijitIconDelete:before {
+	content:@fa-var-times;
+}
+.dijitIconUndo:before {
+	content:@fa-var-undo;
+}
+.dijitIconEdit:before {
+	content:@fa-var-pencil-square-o;
+}
+.dijitIconNewTask:before {
+	content:@fa-var-plus;
+}
+.dijitIconEditTask:before {
+    // &:extend(.fa-);
+}
+.dijitIconEditProperty:before {
+    // &:extend(.fa-);
+}
+.dijitIconTask:before {
+	content:@fa-var-tasks;
+}
+.dijitIconFilter:before {
+	content:@fa-var-filter;
+}
+.dijitIconConfigure:before {
+	content:@fa-var-cog;
+}
+.dijitIconSearch:before {
+	content:@fa-var-search;
+}
+.dijitIconApplication:before {
+    // &:extend(.fa-);
+}
+.dijitIconBookmark:before {
+	content:@fa-var-bookmark;
+}
+.dijitIconChart:before {
+	content:@fa-var-bar-chart-o;
+}
+.dijitIconConnector:before {
+    // &:extend(.fa-);
+}
+.dijitIconDatabase:before {
+    // &:extend(.fa-);
+}
+.dijitIconDocuments:before {
+    // &:extend(.fa-);
+}
+.dijitIconMail:before {
+	content:@fa-var-envelope;
+}
+.dijitLeaf:before {
+	content:@fa-var-file;
+}
+.dijitIconFile:before {
+	content:@fa-var-file;
+}
+.dijitIconFunction:before {
+    // &:extend(.fa-);
+}
+.dijitIconKey:before {
+	content:@fa-var-key;
+}
+.dijitIconPackage:before {
+    // &:extend(.fa-);
+}
+.dijitIconSample:before {
+    // &:extend(.fa-);
+}
+.dijitIconTable:before {
+	content:@fa-var-table;
+}
+.dijitIconUsers:before {
+	content:@fa-var-users;
+}
+.dijitFolderClosed:before {
+	content:@fa-var-folder;
+}
+.dijitIconFolderClosed:before {
+	content:@fa-var-folder;
+}
+.dijitFolderOpened:before {
+	content:@fa-var-folder-open;
+}
+.dijitIconFolderOpen:before {
+	content:@fa-var-folder-open;
+}
+.dijitIconError:before {
+	content:@fa-var-exclamation;
+}
+
+// Editor
+.dijitEditorIcon {
+}
+
+.dijitEditorIconSave:before {
+	content:@fa-var-floppy-o;
+}
+.dijitEditorIconPrint:before {
+	content:@fa-var-print;
+}
+.dijitEditorIconCut:before {
+	content:@fa-var-scissors;
+}
+.dijitEditorIconCopy:before {
+	content:@fa-var-files-o;
+}
+.dijitEditorIconPaste:before {
+	content:@fa-var-clipboard;
+}
+.dijitEditorIconDelete:before {
+	content:@fa-var-trash-o;
+}
+.dijitEditorIconCancel:before {
+	content:@fa-var-ban;
+}
+.dijitEditorIconUndo:before {
+	content:@fa-var-undo;
+}
+.dijitEditorIconRedo:before {
+	content:@fa-var-repeat;
+}
+.dijitEditorIconSelectAll:before {
+    // &:extend(.fa-;
+}
+.dijitEditorIconBold:before {
+	content:@fa-var-bold;
+}
+.dijitEditorIconItalic:before {
+	content:@fa-var-italic;
+}
+.dijitEditorIconUnderline:before {
+	content:@fa-var-underline;
+}
+.dijitEditorIconStrikethrough:before {
+	content:@fa-var-strikethrough;
+}
+.dijitEditorIconSuperscript:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconSubscript:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconJustifyCenter:before {
+	content:@fa-var-align-center;
+}
+.dijitEditorIconJustifyFull:before {
+	content:@fa-var-align-justify;
+}
+.dijitEditorIconJustifyLeft:before {
+	content:@fa-var-align-left;
+}
+.dijitEditorIconJustifyRight:before {
+	content:@fa-var-align-right;
+}
+.dijitEditorIconIndent:before {
+	content:@fa-var-indent;
+}
+.dijitEditorIconOutdent:before {
+	content:@fa-var-outdent;
+}
+.dijitEditorIconListBulletIndent:before {
+	content:@fa-var-list-ul;
+}
+.dijitEditorIconListBulletOutdent:before {
+	content:@fa-var-list-ul;
+}
+.dijitEditorIconListNumIndent:before {
+	content:@fa-var-list-ol;
+}
+.dijitEditorIconListNumOutdent:before {
+	content:@fa-var-list-ol;
+}
+.dijitEditorIconTabIndent:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconLeftToRight:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconRightToLeft:before,
+.dijitEditorIconToggleDir:before {
+}
+.dijitEditorIconBackColor:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconForeColor:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconHiliteColor:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconNewPage:before {
+	content:@fa-var-file;
+}
+.dijitEditorIconInsertImage:before {
+	content:@fa-var-picture-o;
+}
+.dijitEditorIconInsertTable:before {
+	content:@fa-var-table;
+}
+.dijitEditorIconSpace:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconInsertHorizontalRule:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconInsertOrderedList:before {
+	content:@fa-var-list-ol;
+}
+.dijitEditorIconInsertUnorderedList:before {
+	content:@fa-var-list-ul;
+}
+.dijitEditorIconCreateLink:before {
+	content:@fa-var-link;
+}
+.dijitEditorIconUnlink:before {
+	content:@fa-var-chain-broken;
+}
+.dijitEditorIconViewSource:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconRemoveFormat:before {
+    // &:extend(.fa);
+}
+.dijitEditorIconFullScreen:before {
+	content:@fa-var-arrows-alt;
+}
+.dijitEditorIconWikiword:before {
+    // &:extend(.fa);
+}

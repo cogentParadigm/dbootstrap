@@ -1,0 +1,89 @@
+// :copyright: Copyright 2013 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+.dbootstrap .dgrid {
+    background-color: @table-bg;
+    border-color: @table-border-color;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.dbootstrap .dgrid-header,
+.dbootstrap .dgrid-header-scroll,
+.dbootstrap .dgrid-footer {
+    background: @gray-lighter;
+}
+
+.dbootstrap .dgrid-header,
+.dbootstrap .dgrid-header-scroll {
+    font-weight: bold;
+    box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.06) inset;
+}
+
+.dbootstrap .dgrid .dgrid-cell {
+    border-color: @table-bg;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    overflow: hidden;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.dbootstrap .dgrid .dgrid-cell.dgrid-column-first {
+    border-width: 0px;
+}
+
+.dbootstrap .dgrid .dgrid-cell-padding {
+    padding: 8px;
+}
+
+.dbootstrap .dgrid .dgrid-row {
+    border-color: @table-border-color;
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+.dbootstrap .dgrid .dgrid-row-even {
+    background-color: #FFF;
+}
+
+.dbootstrap .dgrid .dgrid-row-odd {
+    background-color: @gray-lighter;
+}
+
+.dbootstrap .dgrid .dgrid-row:hover,
+.dbootstrap .dgrid .dgrid-row:hover .dgrid-cell {
+    background-color: lighten(@brand-primary, 20%);
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Selection
+.dbootstrap .dgrid-selected,
+.dbootstrap .dgrid-selected .dgrid-cell {
+    background-color: @brand-primary;
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Icons
+.dbootstrap .dgrid-sort-arrow {
+    background: none;
+    width: auto;
+    height: auto;
+    margin: 0px;
+}
+
+.dbootstrap .dgrid-sort-arrow:before {
+    &:extend(.dijitIcon:before);
+    content:@fa-var-caret-down;
+}
+
+.dbootstrap .dgrid-sort-down .dgrid-sort-arrow:before {
+    content:@fa-var-caret-down;
+}
+
+.dbootstrap .dgrid-sort-up .dgrid-sort-arrow:before {
+    content:@fa-var-caret-up;
+}
+

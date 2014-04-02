@@ -1,0 +1,46 @@
+// :copyright: Copyright 2013 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dijitTitlePane {
+    border: 1px solid @panel-default-border;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+.dbootstrap .dijitTitlePaneTitle {
+    color: @link-color;
+    border-bottom: none;
+    padding: 8px 15px;
+}
+
+.dbootstrap .dijitTitlePaneTitleHover {
+    color: @link-hover-color;
+}
+
+.dbootstrap .dijitTitlePaneContentOuter {
+    margin-bottom: 2px;
+    border-top: 1px solid @panel-default-border;
+}
+
+.dbootstrap .dijitTitlePaneContentInner {
+    padding: 9px 15px;
+}
+
+.dbootstrap .dijitTitlePane .dijitArrowNode {
+    margin-right: 9px
+}
+
+.dbootstrap .dijitTitlePane .dijitArrowNode:before {
+    &:extend(.dijitIcon:before);
+    text-align: center;
+    width: 12px;
+}
+
+.dbootstrap .dijitTitlePane .dijitOpen .dijitArrowNode:before {
+	content:@fa-var-caret-down;
+}
+
+.dbootstrap .dijitTitlePane .dijitClosed .dijitArrowNode:before {
+	content:@fa-var-caret-right;
+}
