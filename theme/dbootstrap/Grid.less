@@ -52,6 +52,7 @@
 }
 
 .dbootstrap .dgrid .dgrid-row:hover,
+.dbootstrap .dgrid .dgrid-row.dgrid-selected:hover,
 .dbootstrap .dgrid .dgrid-row:hover .dgrid-cell {
     background-color: lighten(@brand-primary, 20%);
     color: #FFF;
@@ -60,6 +61,7 @@
 
 // Selection
 .dbootstrap .dgrid-selected,
+.dbootstrap .dgrid .dgrid-row.dgrid-selected,
 .dbootstrap .dgrid-selected .dgrid-cell {
     background-color: @brand-primary;
     color: #FFF;
@@ -87,3 +89,6 @@
     content:@fa-var-caret-up;
 }
 
+.dbootstrap .dgrid-input {
+        &:extend(.form-control all);
+}
