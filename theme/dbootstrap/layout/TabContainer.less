@@ -2,6 +2,9 @@
 // :license: See LICENSE.txt.
 
 // Common
+dijitTabContainerNoLayout{
+	margin-bottom: 15px;
+}
 .dbootstrap .dijitTabPaneWrapper {
     border: 1px solid @nav-tabs-border-color;
 }
@@ -26,21 +29,89 @@
     padding-top: 8px;
     padding-bottom: 8px;
     line-height: @line-height-base;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.dbootstrap .dijitTabHover {
-    color: @link-hover-color;
-    background-color: @gray-lighter;
-    border-color: @nav-tabs-border-color;
 }
 
 .dbootstrap .dijitTabChecked {
+    cursor: default;
+}
+
+.dbootstrap .dijitTabListContainer-top {
+	& .dijitTab {
+		border: 1px solid transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+	}
+	& .dijitTabHover {
+		border-color: @nav-tabs-border-color;
+		background-color: @gray-lighter;
+		color: @link-hover-color;
+	}
+	& .dijitTabChecked {
     color: @gray;
     background-color: #FFF;
     border-color: @nav-tabs-border-color;
-    cursor: default;
+    border-bottom-color: transparent;
+	}
+}
+
+.dbootstrap .dijitTabListContainer-bottom {
+	& .dijitTab {
+		border: 1px solid transparent;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+	}
+	& .dijitTabHover {
+		border-color: @nav-tabs-border-color;
+		background-color: @gray-lighter;
+		color: @link-hover-color;
+	}
+	& .dijitTabChecked {
+    color: @gray;
+    background-color: #FFF;
+    border-color: @nav-tabs-border-color;
+    border-top-color: transparent;
+	}
+}
+
+.dbootstrap .dijitTabContainerLeft-tabs {
+	border:1px solid @nav-tabs-border-color;
+	border-top-left-radius:4px;
+	border-bottom-left-radius:4px;
+	border-right:none;
+	& .dijitTab {
+		border-bottom:1px solid @nav-tabs-border-color;
+		&:last-child{margin-bottom:-1px}
+	}
+	& .dijitTabHover {
+		background-color: @gray-lighter;
+		color: @link-hover-color;
+	}
+	& .dijitTabChecked {
+    color: @gray;
+    background-color: #FFF;
+    margin-right:-1px
+	}
+}
+
+.dbootstrap .dijitTabContainerRight-tabs {
+	border:1px solid @nav-tabs-border-color;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	border-left:none;
+	& .dijitTab {
+		border-bottom:1px solid @nav-tabs-border-color;
+		margin-right:0;
+		&:last-child{margin-bottom:-1px}
+	}
+	& .dijitTabHover {
+		background-color: @gray-lighter;
+		color: @link-hover-color;
+	}
+	& .dijitTabChecked {
+    color: @gray;
+    background-color: #FFF;
+    margin-left:-1px
+	}
 }
 
 .dbootstrap .dijitTabCloseButton {
@@ -62,29 +133,6 @@
 // Top
 .dbootstrap .dijitTabContainerTop-container {
     margin-top: -1px;
-}
-
-.dbootstrap .dijitTabContainerTop .dijitTab {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.dbootstrap .dijitTabContainerTop .dijitTabChecked {
-    border-bottom-color: transparent;
-}
-
-// Bottom
-.dbootstrap .dijitTabContainerBottom-container {
-    margin-bottom: -1px;
-}
-
-.dbootstrap .dijitTabContainerBottom .dijitTab {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-
-.dbootstrap .dijitTabContainerBottom .dijitTabChecked {
-    border-top-color: transparent;
 }
 
 // Tab strip buttons
