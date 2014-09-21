@@ -4,13 +4,17 @@ Dojo Bootstrap
 
 Bootstrap theme for Dojo.
 
+This is a rewrite of the original project by Martin Pengelly-Phillips at
+https://github.com/thesociable/dbootstrap, written in LESS and targeted at
+Bootstrap 3.
+
 .. image:: https://raw.github.com/thesociable/dbootstrap/master/resource/preview.png
 
 ************
 Get The Code
 ************
 
-    $ git clone --recursive git://github.com/thesociable/dbootstrap.git
+    $ git clone git://github.com/cogentParadigm/dbootstrap.git
 
 ***********
 Integration
@@ -45,63 +49,10 @@ Standalone Package
 
     <body class='dbootstrap'>
 
+#. include /path/to/dbootstrap/theme/dbootstrap/index.less in your LESS files,
+   or compile it to CSS.
+
 #. View your project as normal.
-
-Integrated Build
-================
-
-#. Copy or link the *dbootstrap* folder into your project
-   (typically so that it is a sibling to your Dojo and Dijit packages). You
-   will also need to link the *xstyle* and *nib* packages if you don't already
-   have them.
-
-   .. note::
-
-       Only tested with Dojo 1.8+
-
-#. Add the following to your build profile.js to include dbootstrap as a
-   package and separate build layer::
-
-    packages: [
-        ...
-        'dbootstrap',
-        'xstyle'
-    ],
-
-    layers: {
-        ...
-        'dbootstrap/main': {
-            include: [
-                'dbootstrap/main',
-                'xstyle/load-css'
-            ],
-        }
-    }
-
-   .. note::
-
-        If you have placed your dbootstrap package somewhere that isn't
-        directly accessible as a child directory of your *basePath* then you
-        must use the fuller package syntax in the packages list::
-
-            {
-                location: '/path/to/dbootstrap',
-                name: 'dbootstrap'
-            }
-
-#. In your main application entry point (or index.html) require the dbootstrap
-   package before any Dijit widgets are loaded::
-
-    require(['dbootstrap', ...], function(dbootstrap) {
-        // Start application.
-    });
-
-#. Add *dbootstrap* as a css class to your <body> element::
-
-    <body class='dbootstrap'>
-
-#. Build your project and view as normal.
-
 
 *********************
 Copyright and license
@@ -121,4 +72,3 @@ Font-Awesome
 
 The icons are provided by the excellent Font-Awesome team at
 http://fortawesome.github.com/Font-Awesome/
-
