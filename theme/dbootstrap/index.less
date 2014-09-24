@@ -1,6 +1,10 @@
 // :copyright: Copyright 2014 Ali Gangji
 // :license: See LICENSE.txt.
-@import '../../../../../libraries/dojo/dijit/themes/dijit.css';
+@dijit-path:"../../../../../libraries/dojo/dijit";
+.dbootstrap{
+  @import "@{dijit-path}/themes/dijit.css";
+}
+.dbootstrap();
 @import '../../../../../libraries/font-awesome/less/font-awesome';
 @fa-font-path:"//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts";
 @import 'icon';
