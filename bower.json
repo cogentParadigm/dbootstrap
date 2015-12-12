@@ -1,0 +1,26 @@
+{
+  "name": "dbootstrap-less",
+  "version": "0.8.1",
+  "homepage": "https://github.com/cogentParadigm/dbootstrap",
+  "authors": [
+    "Ali Gangji <ali@neonrain.com>"
+  ],
+  "description": "Dojo Bootstrap Theme",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "Dojo",
+    "Bootstrap",
+    "Theme"
+  ],
+  "license": "BSD license or the Apache License, Version 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
