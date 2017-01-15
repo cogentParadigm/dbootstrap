@@ -1,64 +1,47 @@
-.dbootstrap .dgrid-grid {
+.dbootstrap-grid {
     background-color: @table-bg;
     border-color: @table-border-color;
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
     padding: 0px;
-}
-
-.dbootstrap .dgrid-header,
-.dbootstrap .dgrid-header-scroll,
-.dbootstrap .dgrid-footer {
-    background: @table-bg-accent;
-}
-
-.dbootstrap .dgrid-header,
-.dbootstrap .dgrid-header-scroll {
-    font-weight: bold;
-    box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.06) inset;
-}
-
-.dbootstrap .dgrid-grid .dgrid-cell {
-    border-color: @table-bg;
-    border-style: solid;
-    border-width: 0 1px 0 0;
-    overflow: hidden;
-}
-
-.dbootstrap .dgrid-grid .dgrid-cell.dgrid-column-first {
-    border-width: 0px;
-}
-
-.dbootstrap .dgrid-grid .dgrid-cell-padding {
-    padding: 8px;
-}
-
-.dbootstrap .dgrid-grid .dgrid-row {
-    border-color: @table-border-color;
-    border-style: solid;
-    border-width: 0 0 1px;
-}
-
-.dbootstrap .dgrid-grid .dgrid-row-even {
-    background-color: #FFF;
-}
-
-.dbootstrap .dgrid-grid .dgrid-row-odd {
-    background-color: @table-bg-accent;
-}
-
-.dbootstrap .dgrid-grid .dgrid-row:hover,
-.dbootstrap .dgrid-grid .dgrid-row.dgrid-selected:hover,
-.dbootstrap .dgrid-grid .dgrid-row:hover .dgrid-cell {
-    background-color: @table-bg-hover;
-}
-
-// Selection
-.dbootstrap .dgrid-grid .dgrid-selected,
-.dbootstrap .dgrid-grid .dgrid-row.dgrid-selected,
-.dbootstrap .dgrid-grid .dgrid-selected .dgrid-cell {
-    background-color: @table-bg-active;
+    .dgrid-header, .dgrid-header-scroll, .dgrid-footer {
+        background: @table-bg-accent;
+    }
+    .dgrid-header, .dgrid-header-scroll {
+        font-weight: bold;
+        box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.06) inset;
+    }
+    .dgrid-cell {
+        border-color: @table-bg;
+        border-style: solid;
+        border-width: 0 1px 0 0;
+        overflow: hidden;
+    }
+    .dgrid-cell.dgrid-column-first {
+        border-width: 0px;
+    }
+    .dgrid-cell-padding {
+        padding: 8px;
+    }
+    .dgrid-row {
+        border-color: @table-border-color;
+        border-style: solid;
+        border-width: 0 0 1px;
+    }
+    .dgrid-row-even {
+        background-color: #FFF;
+    }
+    .dgrid-row-odd {
+        background-color: @table-bg-accent;
+    }
+    .dgrid-row:hover, .dgrid-row.dgrid-selected:hover, .dgrid-row:hover .dgrid-cell {
+        background-color: @table-bg-hover;
+    }
+    // Selection
+    .dgrid-selected, .dgrid-row.dgrid-selected, .dgrid-selected .dgrid-cell {
+        background-color: @table-bg-active;
+    }
 }
 
 // Icons
